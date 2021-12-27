@@ -5,7 +5,7 @@ session_start();
 
 <html>
         <head>
-                <meta name="google-signin-client_id" content="CLIENT_ID">
+                <meta name="google-signin-client_id" content="http://663823076896-fq2lo49gjjimiat7cd8p1s4vq5frjf2h.apps.googleusercontent.com">
                 <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
         </head>
         <body>
