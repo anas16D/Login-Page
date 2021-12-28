@@ -24,7 +24,9 @@ session_start();
                 <?php
                 if(isset($_SESSION['USER_ID'])){
                         ?>
+                
                         <a href="javascript:void(0)" onclick="logout()">Logout</a>
+                               
                         <?php
                 }else{
                         ?>
@@ -62,10 +64,8 @@ session_start();
                         jQuery.ajax({
                                 url:'login_check.php',
                                 type:'post',
-                                data:'user_id='+userProfile.getId()+'&name='+userProfile.getName(),
-                                success:function(result){
-                                        window.location.href="index.php";
-                                }
+                                data:'user_id='+userProfile.getId()+'&name='+userProfile.getName()
+                                
                         });
                 }
                 </script>
