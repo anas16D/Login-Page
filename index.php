@@ -60,9 +60,9 @@ session_start();
                 
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
-                        
-                        <?php echo "$_SESSION['NAME']=" ;?> userProfile.getName();
-                        
+                        /*
+                        <?php //echo "$_SESSION['NAME']=" ;?> userProfile.getName();
+                        */
                        
                         
                         $.ajax({
