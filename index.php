@@ -18,7 +18,7 @@ session_start();
         
         <head>
                 <meta name="google-signin-client_id" content="663823076896-fq2lo49gjjimiat7cd8p1s4vq5frjf2h.apps.googleusercontent.com">
-                <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+                <script src="https://apis.google.com/js/platform.js?onload=onLoad" ></script>
         </head>
         <body>
                
