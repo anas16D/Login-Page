@@ -61,8 +61,9 @@ session_start();
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
                         
-                       
+                        <?php echo "$_SESSION['NAME']=" ;?> userProfile.getName();
                         
+                       
                         
                         $.ajax({
                                 url:'login_check.php',
@@ -89,7 +90,9 @@ session_start();
                 if(isset($_SESSION['USER_ID'])){
                         
                 echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
-                echo "<div class = 'welcome'> <script> $(window).on('load', function(){ logoutScreen(); }); </script>  </div>";
+                //echo "<div class = 'welcome'> <script> $(window).on('load', function(){ logoutScreen(); }); </script>  </div>";
+                        
+                echo "<div class = 'welcome'> Hello " + $_SESSION['NAME'] + "</div>";
                          
                         
                                
