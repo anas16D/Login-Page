@@ -79,7 +79,7 @@ session_start();
                         
                 echo "<a href='javascript:void(0)' onclick='logout()'> Logout</a></div>";
                         
-                   echo "<div class='g-signin2' data-onsuccess='gmailLogIn'> </div>";
+                   echo "<div class='g-signin2'> </div>";
                          
                         
                                
