@@ -56,14 +56,14 @@ session_start();
                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName());
                         
                         
-//                         jQuery.ajax({
-//                                 url:'login_check.php',
-//                                 type:'post',
-//                                 data:'user_id='+userProfile.getId()+'&name='+userProfile.getName()+'&image='+userProfile.getImageUrl()+'&email='+userProfile.getEmail(),
-//                                 success:function(result){
-//                                         window.location.href="index.php";
-//                                 }
-//                         });
+                        jQuery.ajax({
+                                url:'login_check.php',
+                                type:'post',
+                                data:'user_id='+userProfile.getId()+'&name='+userProfile.getName(),
+                                success:function(result){
+                                        window.location.href="index.php";
+                                }
+                        });
                 }
                 </script>
                 
