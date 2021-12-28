@@ -29,7 +29,7 @@ session_start();
                     var auth2 = gapi.auth2.getAuthInstance();
                     auth2.signOut();
                         
-                        jQuery.ajax({
+                        $.ajax({
                                 url:'logout.php',
                                 success:function(result){
                                         window.location.href="index.php";
@@ -47,11 +47,8 @@ session_start();
                 }
                 function logoutScreen(){
                         
-                         gapi.load('auth2',function (){
-                              gapi.auth2.init();
-                       }); 
                         
-                        let userProfile = gapi.auth2.currentUser.get().getBasicProfile();
+                        let userProfile = auth2.currentUser.get().getBasicProfile();
                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
                         console.log("hello");
                                 
@@ -63,7 +60,7 @@ session_start();
                        
                         
                         
-                        jQuery.ajax({
+                        $.ajax({
                                 url:'login_check.php',
                                 type:'post',
                                 data:'user_id='+userProfile.getId()+'&name='+userProfile.getName(),
