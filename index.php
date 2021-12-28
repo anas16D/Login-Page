@@ -7,8 +7,11 @@ session_start();
         <style>
                 .welcome
                 {
-                        font-size:18px;
+                        font-size:22px;
                         font-family:Georgia;
+                        top:20%;
+                        left:35%;
+                        color:red;
                         
                 }
         </style>
