@@ -4,6 +4,15 @@ session_start();
 ?>
 
 <html>
+        <style>
+                .welcome
+                {
+                        font-size:18px;
+                        font-family:Georgia;
+                        
+                }
+        </style>
+        
         <head>
                 <meta name="google-signin-client_id" content="663823076896-fq2lo49gjjimiat7cd8p1s4vq5frjf2h.apps.googleusercontent.com">
                 <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
@@ -44,7 +53,7 @@ session_start();
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
                         
-                        document.write("<br><p>Hello" + userProfile.getName());
+                        document.write("<br><p class = 'welcome' >Hello " + userProfile.getName());
                         
                         
 //                         jQuery.ajax({
