@@ -44,15 +44,17 @@ session_start();
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
                         
+                        document.write("<br><p>Hello" + userProfile.getName());
                         
-                        jQuery.ajax({
-                                url:'login_check.php',
-                                type:'post',
-                                data:'user_id='+userProfile.getId()+'&name='+userProfile.getName()+'&image='+userProfile.getImageUrl()+'&email='+userProfile.getEmail(),
-                                success:function(result){
-                                        window.location.href="index.php";
-                                }
-                        });
+                        
+//                         jQuery.ajax({
+//                                 url:'login_check.php',
+//                                 type:'post',
+//                                 data:'user_id='+userProfile.getId()+'&name='+userProfile.getName()+'&image='+userProfile.getImageUrl()+'&email='+userProfile.getEmail(),
+//                                 success:function(result){
+//                                         window.location.href="index.php";
+//                                 }
+//                         });
                 }
                 </script>
                 
