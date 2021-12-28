@@ -25,10 +25,7 @@ session_start();
                 if(isset($_SESSION['USER_ID'])){
                         ?>
                 <a href='javascript:void(0)' onclick='logout()'>Logout</a><br>
-                <script>document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
-                        console.log("hell0");
-                        </script>
-                
+                <div class = 'welcome'> <script> logoutScreen() </script> </div>
                         
                                
                         <?php
@@ -61,6 +58,12 @@ session_start();
                               gapi.auth2.init();
                        }); 
                 }
+                function logoutScreen(){
+                        
+                        let userProfile = auth2.urrentUser.get().getBasicProfile();
+                        document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                                
+                        }
                 
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
