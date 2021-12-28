@@ -92,7 +92,7 @@ session_start();
                 echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
                 //echo "<div class = 'welcome'> <script> $(window).on('load', function(){ logoutScreen(); }); </script>  </div>";
                         
-                echo "<div class = 'welcome'> Hello " + $_SESSION['NAME'] + "</div>";
+                echo "<div class = 'welcome'> Hello ".$_SESSION['NAME']."</div>";
                          
                         
                                
