@@ -39,7 +39,12 @@ session_start();
                 
                 function logout(){
                     var auth2 = gapi.auth2.getAuthInstance();
-                    auth2.signOut();  
+                    auth2.signOut();
+                        
+                        jQuery.ajax({
+                                url:'logout.php'
+                               
+                        });
                    
                     
                 }
