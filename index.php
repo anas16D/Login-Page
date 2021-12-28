@@ -47,8 +47,10 @@ session_start();
                 }
                 function logoutScreen(){
                         
+                        var auth2 = gapi.auth2.getAuthInstance();
+                        var userProfile = auth2.currentUser.get().getBasicProfile();
                         
-                        let userProfile = gapi.auth2.currentUser.get().getBasicProfile();
+                        //let userProfile = gapi.auth2.currentUser.get().getBasicProfile();
                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
                         console.log("hello");
                                 
