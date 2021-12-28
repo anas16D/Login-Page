@@ -47,6 +47,8 @@ session_start();
                 }
                 function logoutScreen(){
                         
+                        gapi.auth2.init();
+                        
                         var auth2 = gapi.auth2.getAuthInstance();
                         var userProfile = auth2.currentUser.get().getBasicProfile();
                         
