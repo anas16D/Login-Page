@@ -21,20 +21,7 @@ session_start();
                 <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
         </head>
         <body>
-                <?php
-                if(isset($_SESSION['USER_ID'])){
-                        
-                echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
-                echo "<div class = 'welcome'> <script> logoutScreen(); </script>  </div>";
-                        
-                               
-                        
-                }else{
-                        
-                        echo "<div class='g-signin2' data-onsuccess='gmailLogIn'> </div>";
-                       
-                }
-                ?>
+               
                 
                 <script>
                 
@@ -91,6 +78,22 @@ session_start();
                 </script>
                 
                 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                
+                
+                 <?php
+                if(isset($_SESSION['USER_ID'])){
+                        
+                echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
+                echo "<div class = 'welcome'> <script> logoutScreen(); </script>  </div>";
+                        
+                               
+                        
+                }else{
+                        
+                        echo "<div class='g-signin2' data-onsuccess='gmailLogIn'> </div>";
+                       
+                }
+                ?>
         </body>
 </html>
 
