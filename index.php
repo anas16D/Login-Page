@@ -9,8 +9,8 @@ session_start();
                 {
                         font-size:22px;
                         font-family:Georgia;
-                        top:20%;
-                        left:35%;
+                        top:20px;
+                        left:35px;
                         color:red;
                         
                 }
@@ -77,7 +77,9 @@ session_start();
                        
                 echo "<div class = 'welcome'> Hello ".$_SESSION['NAME'];
                         
-                echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a></div>";
+                echo "<a href='javascript:void(0)' onclick='logout()'> Logout</a></div>";
+                        
+                   echo "<div class='g-signin2' data-onsuccess='gmailLogIn'> </div>";
                          
                         
                                
