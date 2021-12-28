@@ -18,7 +18,7 @@ session_start();
         
         <head>
                 <meta name="google-signin-client_id" content="663823076896-fq2lo49gjjimiat7cd8p1s4vq5frjf2h.apps.googleusercontent.com">
-                <script src="https://apis.google.com/js/platform.js?onload=onLoad" ></script>
+                <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer ></script>
         </head>
         <body>
                
@@ -46,6 +46,10 @@ session_start();
                        }); 
                 }
                 function logoutScreen(){
+                        
+                         gapi.load('auth2',function (){
+                              gapi.auth2.init();
+                       }); 
                         
                         let userProfile = gapi.auth2.currentUser.get().getBasicProfile();
                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
