@@ -25,9 +25,10 @@ session_start();
                 if(isset($_SESSION['USER_ID'])){
                         ?>
                 <a href='javascript:void(0)' onclick='logout()'>Logout</a><br>
-                <div> <script>document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                <script>document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                        console.log("hell0");
                         </script>
-                </div>
+                
                         
                                
                         <?php
