@@ -61,15 +61,24 @@ session_start();
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
                         
-                        document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                       
                         
                         
                         jQuery.ajax({
                                 url:'login_check.php',
                                 type:'post',
-                                data:'user_id='+userProfile.getId()+'&name='+userProfile.getName()
+                                data:'user_id='+userProfile.getId()+'&name='+userProfile.getName(),
+                                success:function(result){
+                                       
+                                        window.location.href="index.php";
+                                }
+                               
                                 
                         });
+                        
+                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                        
+                       
                 }
                 </script>
                 
