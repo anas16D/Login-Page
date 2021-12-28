@@ -25,7 +25,7 @@ session_start();
                 if(isset($_SESSION['USER_ID'])){
                         ?>
                 
-                        <a href="javascript:void(0)" onclick="logout()">Logout</a>
+                        
                                
                         <?php
                 }else{
@@ -58,7 +58,7 @@ session_start();
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
                         
-                        document.write("<br><p class = 'welcome' >Hello " + userProfile.getName());
+                        document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href="javascript:void(0)" onclick='logout()'>Logout</a></p>");
                         
                         
                         jQuery.ajax({
