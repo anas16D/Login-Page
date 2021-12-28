@@ -88,7 +88,7 @@ session_start();
                 if(isset($_SESSION['USER_ID'])){
                         
                 echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
-                echo "<div class = 'welcome'> <script> logoutScreen(); </script>  </div>";
+                echo "<div class = 'welcome'> <script> $(document).ready(function(){ logoutScreen(); }); </script>  </div>";
                         
                                
                         
