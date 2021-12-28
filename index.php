@@ -45,24 +45,10 @@ session_start();
                               gapi.auth2.init();
                        }); 
                 }
-                function logoutScreen(){
-                        
-                        gapi.auth2.init();
-                        
-                        var auth2 = gapi.auth2.getAuthInstance();
-                        var userProfile = auth2.currentUser.get().getBasicProfile();
-                        
-                        //let userProfile = gapi.auth2.currentUser.get().getBasicProfile();
-                        document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
-                        console.log("hello");
-                                
-                        }
+                
                 
                 function gmailLogIn(userInfo){
                         var userProfile=userInfo.getBasicProfile();
-                        /*
-                        <?php //echo "$_SESSION['NAME']=" ;?> userProfile.getName();
-                        */
                        
                         
                         $.ajax({
@@ -76,8 +62,7 @@ session_start();
                                
                                 
                         });
-                        
-                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                       
                         
                        
                 }
@@ -89,10 +74,10 @@ session_start();
                  <?php
                 if(isset($_SESSION['USER_ID'])){
                         
-                echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
-                //echo "<div class = 'welcome'> <script> $(window).on('load', function(){ logoutScreen(); }); </script>  </div>";
+                       
+                echo "<div class = 'welcome'> Hello ".$_SESSION['NAME'];
                         
-                echo "<div class = 'welcome'> Hello ".$_SESSION['NAME']."</div>";
+                echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a></div>";
                          
                         
                                
