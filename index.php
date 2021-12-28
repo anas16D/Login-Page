@@ -62,6 +62,7 @@ session_start();
                         
                         let userProfile = auth2.urrentUser.get().getBasicProfile();
                         document.write("<br><p class = 'welcome' >Hello " + userProfile.getName() + " <a href='javascript:void(0)' onclick='logout()'>Logout</a></p>");
+                        console.log("hello");
                                 
                         }
                 
