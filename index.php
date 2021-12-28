@@ -23,16 +23,16 @@ session_start();
         <body>
                 <?php
                 if(isset($_SESSION['USER_ID'])){
-                        ?>
-                <a href='javascript:void(0)' onclick='logout()'>Logout</a><br>
-                <div class = 'welcome' onload= 'logoutScreen()'>  </div>
+                        
+                echo "<a href='javascript:void(0)' onclick='logout()'>Logout</a><br>";
+                echo "<div class = 'welcome'> <script> logoutScreen(); </script>  </div>";
                         
                                
-                        <?php
+                        
                 }else{
-                        ?>
-                        <div class="g-signin2" data-onsuccess="gmailLogIn"></div>
-                        <?php
+                        
+                        echo "<div class='g-signin2' data-onsuccess='gmailLogIn'> </div>";
+                       
                 }
                 ?>
                 
