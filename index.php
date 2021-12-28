@@ -42,7 +42,10 @@ session_start();
                     auth2.signOut();
                         
                         jQuery.ajax({
-                                url:'logout.php'
+                                url:'logout.php',
+                                success:function(result){
+                                        window.location.href="index.php";
+                                }
                                
                         });
                    
