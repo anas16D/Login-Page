@@ -4,7 +4,7 @@ session_start();
 ?>
 
 <html>
-        <style>
+        <style = "text/css">
                 .welcome
                 {
                         font-size:22px;
@@ -25,7 +25,7 @@ session_start();
                 if(isset($_SESSION['USER_ID'])){
                         ?>
                 <a href='javascript:void(0)' onclick='logout()'>Logout</a><br>
-                <div class = 'welcome'> <script> logoutScreen() </script> </div>
+                <div class = 'welcome' onload= 'logoutScreen()'>  </div>
                         
                                
                         <?php
