@@ -24,7 +24,7 @@ session_start();
                 <?php
                 if(isset($_SESSION['USER_ID'])){
                         ?>
-                
+                <a href='javascript:void(0)' onclick='logout()'>Logout</a>
                         
                                
                         <?php
